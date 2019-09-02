@@ -91,6 +91,8 @@ public class OkHttpConnection {
 	이 부분은 따로 예제 코드를 안넣겠다. HttpURLConnection에서 
 	AsyncTask를 썼으니까 그 부분을 참고해서 쓰면 될 것이다.
 	
+<a href="https://github.com/Uni-Stark/Android_method_make_up/blob/master/HTTPConnection/Code/HttpCall.java" target="_blank">AsyncTask로 메소드 콜 사용법</
+	
 ## OkHttp3 포스팅을 마치며
 
 	너무도 짧고 아름답다. HttpURLConnection으로 별거별거를 다 하던걸 단 몇줄만으로 끝냈다.
