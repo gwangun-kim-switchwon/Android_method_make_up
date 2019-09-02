@@ -248,7 +248,7 @@ public class onHTTPConnection {
 		- Progress : doInBackground 작업 시 진행 단위의 타입으로 onProgressUpdate의 파라미터 타입이다.
 		- Result : doInBackground의 리턴값으로 onPostExecute 파라미터 타입이 된다.
 
-	(출처 : https://itmining.tistory.com/7)
+(출처 : <a href="https://itmining.tistory.com/7" target="_blank">https://itmining.tistory.com/7</a>)
 	
 </br>
 
