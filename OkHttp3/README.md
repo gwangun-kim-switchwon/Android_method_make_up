@@ -2,12 +2,12 @@
 
 ***
 
-##Intro
+## Intro
 
 	어제 HttpURLConnection에 대하여 정리를 했다. GET이든 POST든 뭘 하든
 	너무 길고 복잡해서 잘 안쓴다 나도. 그래서 오늘은 쉽고 편한 OkHttp3에 대하여 정리한다.
 	
-##Basis
+## Basis
 
 
 	OkHttp3는 Square사의 오픈소스 라이브러리이다. OkHttp는 Retrofit2에서도 이용되는데,
