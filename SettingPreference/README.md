@@ -181,3 +181,5 @@ implementation 'androidx.preference:preference:1.1.0-rc01'
 ~~~java
 public class SettingFragment extends PreferenceFragmentCompat
 ~~~
+
+    뭔가 이상하다
