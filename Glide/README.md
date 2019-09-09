@@ -4,8 +4,8 @@
 
 ### 1. dependencies 추가하기 (앱 수준)
 *****
-<img src="img/img_gradle_pick.PNG" width="300" />
-<img src="img/img_gradle_add_implementation.PNG" width="550" />
+<img src="markdown/img/img_gradle_pick.PNG" width="300" />
+<img src="markdown/img/img_gradle_add_implementation.PNG" width="550" />
 
 
 
@@ -27,7 +27,7 @@
 <uses-permission android:name="android.permission.INTERNET"/>
 ~~~
 
-<img src="img/img_manifest_add.PNG"/>
+<img src="markdown/img/img_manifest_add.PNG"/>
 
 
 </br>
