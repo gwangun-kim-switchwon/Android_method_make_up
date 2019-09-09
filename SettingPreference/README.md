@@ -35,7 +35,8 @@ implementation 'androidx.preference:preference:1.1.0-rc01'
 
 <img src="markdown/img/setting_file.PNG"/>
 
-	사진과 같이 res에 xml 디렉토리를 하나 만들어서 settings_preference.xml을 만들어 원하는 기능을 추가한다. 여기서는 CheckBox, EditText, List, 의존성 기능을 넣었다. (파일 이름은 달라도 상관 없어요)
+	사진과 같이 res에 xml 디렉토리를 하나 만들어서 settings_preference.xml을 만들어 원하는 기능을 추가한다.
+	여기서는 CheckBox, EditText, List, 의존성 기능을 넣었다. (파일 이름은 달라도 상관 없어요)
 	
 	
 ~~~xml
@@ -109,7 +110,8 @@ implementation 'androidx.preference:preference:1.1.0-rc01'
 	
 #### 2.1 ListPreference 리스트 추가하기
 
-	앞서 settings_preference.xml에서 ListPreference를 썼는데, 그렇다면 해당 ListPreference를 클릭하면 List가 뜨게 하기위하여 List를 만들어보자. 먼저 values에 array.xml을 하나 추가한다. 아래 사진처럼
+	앞서 settings_preference.xml에서 ListPreference를 썼는데, 그렇다면 해당 ListPreference를 클릭하면
+	List가 뜨게 하기위하여 List를 만들어보자. 먼저 values에 array.xml을 하나 추가한다. 아래 사진처럼
 
 <img src="markdown/img/list_add.PNG"/>
 
@@ -137,7 +139,7 @@ implementation 'androidx.preference:preference:1.1.0-rc01'
 	language_value는 SharedPreference에 저장될 값이다.
 	SharedPreference는 나중에 정리를 할 것이니 모르겠다면 구글에 검색해보자. 갓글
 	
----
+
 
 	ListPreference에 넣을 List를 만들었다면 다시 아까 작성했던 ListPreference를 보자
 	
@@ -166,7 +168,6 @@ implementation 'androidx.preference:preference:1.1.0-rc01'
 	이때 fragment는 Activity 내에 생성되는, UI 구성을 여러 개의 모듈 단위로 작성할 수 있도록 해주는 기능이다.
 	또한 구글에서는 다음과 같이 fragment를 정의하고 있다.
 	
----
 
 	fragment는 자체 수명 주기를 가지고, 자체 입력 이벤트를 받으며,
 	액티비티 실행 중에 추가 및 제거가 가능한 액티비티의 모듈식 섹션이라고 생각하면 된다.
@@ -176,7 +177,9 @@ implementation 'androidx.preference:preference:1.1.0-rc01'
 
 ### 3.1 SettingFragment.java
 
-	settings_preference.xml을 onCreate해주고 각 기능들을 정의해줄 java파일을 하나 만든다. 이때 extends해주는 것은 PreferenceFragmentCompat이다. 다른 것들은 deprecated 됐으니까 PreferenceFragmentCompat을 써줘야한다.
+	settings_preference.xml을 onCreate해주고 각 기능들을 정의해줄 java파일을 하나 만든다.
+	이때 extends해주는 것은 PreferenceFragmentCompat이다. 
+	다른 것들은 deprecated 됐으니까 PreferenceFragmentCompat을 써줘야한다.
 
 ~~~java
 public class SettingFragment extends PreferenceFragmentCompat{
