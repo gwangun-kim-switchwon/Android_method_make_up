@@ -176,10 +176,67 @@ implementation 'androidx.preference:preference:1.1.0-rc01'
 
 ### 3.1 SettingFragment.java
 
-	settings_preference.xml을 onCreate해주고 각 기능들을 정의해줄 java파일을 하나 만든다. 이때 extends해주는 것은 PreferenceFragmentCompat이다. 다른 것들은 deprecated 됐으니까 이거를 써줘야한다.
+	settings_preference.xml을 onCreate해주고 각 기능들을 정의해줄 java파일을 하나 만든다. 이때 extends해주는 것은 PreferenceFragmentCompat이다. 다른 것들은 deprecated 됐으니까 PreferenceFragmentCompat을 써줘야한다.
 
 ~~~java
-public class SettingFragment extends PreferenceFragmentCompat
+public class SettingFragment extends PreferenceFragmentCompat{
+
+    private static final String SETTING_CHKBOX = "key_chk_box";
+    private static final String SETTING_EDITTEXT = "key_edit_text";
+    private static final String SETTING_LANGUAGE = "key_language";
+    private static final String SETTING_DEPTEST = "key_dependent";
+    private static final String SETTING_DEPCHILD = "key_dependent_child";
+    SharedPreferences prefs;
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        addPreferencesFromResource(R.xml.settings_preference);
+        prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        prefs.registerOnSharedPreferenceChangeListener(prefListener);
+    }
+
+    SharedPreferences.OnSharedPreferenceChangeListener prefListener =
+	new SharedPreferences.OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+		// key값에 해당하는 명령 넣기
+            if (key.equals(SETTING_CHKBOX)) {
+                Log.d("TAG", key + "SELECTED");
+            } else if (key.equals(SETTING_DEPTEST)) {
+                Log.d("TAG", key + "SELECTED");
+            } else if (key.equals(SETTING_DEPCHILD)) {
+                Log.d("TAG", key + "SELECTED");
+            } else if (key.equals(SETTING_EDITTEXT)) {
+                Log.d("TAG", key + "SELECTED");
+            } else if (key.equals(SETTING_LANGUAGE)) {
+                Log.d("TAG", key + "SELECTED");
+            }
+
+        }
+    };
+
+}
 ~~~
 
-    뭔가 이상하다
+## 4. 원하는 Layout에 fragment 넣어주기
+
+	settings_preference를 SettingFragment를 통해 fragment에 담아주었다.
+	이제 이 fragment를 보여줄 View를 Layout에서 설정해서 보여주면된다.
+	
+~~~xml
+	<fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.uni.settingtest.SettingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+~~~
+
+	위와 같은 형식으로 말이다. 그렇게 하고 컴파일을 해주면 아래 사진과 같은 결과 화면을 볼 수 있다.
+	
+<img src="markdown/img/img_setting_preference_result.png" width="330"/>
+
+
+## Setting Preference 포스팅을 마치며
+
+	개으름이 도져서 시간이 생각보다 오래 걸렸다. 간단하게 했던걸로 기억하는데,
+	생각보다 할 것들이 많아서 그랬던 것 같다. 다음에는 간단한걸 해야겠다.
