@@ -9,5 +9,3 @@
 #### 2019. 09.02 <a href="https://github.com/Uni-Stark/Android_method_make_up/tree/master/OkHttp3" target="_blank"> OkHttp3</a> 정리
 #### 2019. 09 03 ~ 09.09 <a href="https://github.com/Uni-Stark/Android_method_make_up/tree/master/SettingPreference" target="_blank"> SettingPreference</a> 정리
 #### 2019. 09 14 ~ ArrayList 정리 시작 (추석이라 너무 잘 놀았다....)
-
-이상해~
